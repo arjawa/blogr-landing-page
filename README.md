@@ -18,9 +18,9 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 ## Screenshots
 
 #### Desktop
-![Desktop version](screenshots/desktop.png)
+![Desktop version](screenshots/blogr_desktop.png)
 #### Mobile
-![Mobile version](screenshots/mobile.png)
+![Mobile version](screenshots/blogr_mobile.png)
 
 ## Credits
 
