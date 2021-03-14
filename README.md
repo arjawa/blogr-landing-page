@@ -13,7 +13,7 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 ## Demo
 
-- Demo URL: [https://arjawa.github.io/blogr-landing-page](https://https://arjawa.github.io/blogr-landing-page)
+- Demo URL: [https://arjawa.github.io/blogr-landing-page](https://arjawa.github.io/blogr-landing-page)
 
 ## Screenshots
 
