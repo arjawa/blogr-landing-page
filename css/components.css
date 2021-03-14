@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hide tap highlights on <a></a> tags */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* custom utilities */
+@layer utilities {
+  .h-120 {
+    height: 36rem;
+  }
+  .rounded-bl-custom {
+    border-bottom-left-radius: 7rem;
+  }
+  .rounded-tr-custom {
+    border-top-right-radius: 7rem;
+  }
+}

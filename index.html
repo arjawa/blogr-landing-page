@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Blogr]</title>
+  
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="tailwind.css"/>
+</head>
+<body>
+  
+  <header class="h-120 md:h-110 w-full bg-gradient-image rounded-bl-custom">
+    <div class="md:container md:mx-auto md:flex md:justify-between">
+      <!-- navbar -->
+      <nav class="relative h-24 w-full md:w-auto flex items-end md:items-center px-7 md:px-0 z-20">
+        <div class="md:mt-6 h-10 w-full flex justify-between items-center">
+          <img class="h-8" src="images/logo.svg" alt="Blogr" />
+          <a id="menuToggler" class="md:hidden" href="#">
+            <img src="images/icon-hamburger.svg" alt="hamburger_icon">
+          </a>
+        </div>
+      </nav>
+      <!-- dropdown menus -->
+      <div id="menuCollapse" class="hidden w-full md:container absolute top-20 md:right-26 md:top-3 md:flex transform opacity-0 md:opacity-100 scale-90 md:scale-100 transition duration-500 md:mt-10 z-20 px-7 pt-10 pb-11 md:p-0 md:pl-28">
+        <div class="h-auto md:h-18 w-full flex flex-col md:flex-row items-center md:items-start px-6 md:px-0 bg-white md:bg-transparent rounded-md shadow-xl md:shadow-none text-lg font-ubuntu font-medium">
+          <div class="w-full md:w-3/5 flex flex-col md:flex-row md:space-x-10 items-center md:items-start space-y-4 md:space-y-0 py-6 md:py-0 border-b border-gray-200 md:border-0 md:text-white md:text-sm">
+            <div class="w-full md:w-auto flex flex-col">
+              <a class="menu w-full md:w-auto text-center md:hover:underline pb-4" href="#product">
+                Product 
+                <img id="arrow_product_dark" class="inline transform md:hidden" src="images/icon-arrow-dark.svg" alt="arrow_icon">
+                <img id="arrow_product_light" class="md:inline transform hidden" src="images/icon-arrow-light.svg" alt="arrow_icon">
+              </a>
+              <div id="product" class="hidden w-full flex flex-col items-center text-sm space-y-4 p-4 bg-gray-200 text-gray-600 rounded-md">
+                <a class="w-full text-center" href="">Overview</a>
+                <a class="w-full text-center" href="">Pricing</a>
+                <a class="w-full text-center" href="">Marketplace</a>
+                <a class="w-full text-center" href="">Features</a>
+                <a class="w-full text-center" href="">Integrations</a>
+              </div>
+            </div>
+            <div class="w-full md:w-auto flex flex-col">
+              <a class="menu w-full md:w-auto text-center md:hover:underline pb-4" href="#company">
+                Company 
+                <img id="arrow_company_dark" class="inline transform md:hidden" src="images/icon-arrow-dark.svg" alt="arrow_icon" />
+                <img id="arrow_company_light" class="md:inline transform hidden" src="images/icon-arrow-light.svg" alt="arrow_icon" />
+              </a>
+              <div id="company" class="hidden w-full flex flex-col items-center text-sm space-y-4 p-4 bg-gray-200 text-gray-600 rounded-md">
+                <a class="w-full text-center" href="">About</a>
+                <a class="w-full text-center" href="">Team</a>
+                <a class="w-full text-center" href="">Blog</a>
+                <a class="w-full text-center" href="">Careers</a>
+              </div>
+            </div>
+            <div class="w-full md:w-auto flex flex-col">
+              <a class="menu w-full md:w-auto text-center md:hover:underline pb-4" href="#connect">
+                Connect 
+                <img id="arrow_connect_dark" class="inline transform md:hidden" src="images/icon-arrow-dark.svg" alt="arrow_icon" />
+                <img id="arrow_connect_light" class="md:inline transform hidden" src="images/icon-arrow-light.svg" alt="arrow_icon" />
+              </a>
+              <div id="connect" class="hidden w-full flex flex-col items-center text-sm space-y-4 p-4 bg-gray-200 text-gray-600 rounded-md">
+                <a class="w-full text-center" href="">Contact</a>
+                <a class="w-full text-center" href="">Newsletter</a>
+                <a class="w-full text-center" href="">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/5 flex flex-col md:flex-row md:justify-end items-center md:text-white md:text-sm space-y-4 md:space-y-0 md:space-x-5 p-4 py-8 md:p-0">
+            <a class="w-full md:w-auto text-center" href="#">Login</a>
+            <a class="w-auto text-center text-white px-6 py-2 rounded-full bg-gradient-to-l from-light-red hover:from-lighter-red-1 to-lighter-red md:from-white md:to-white md:hover:text-white md:text-light-red hover:to-lighter-red-1 font-bold transition duration-500" href="#">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- header section -->
+    <section class="relative h-full flex flex-col justify-center items-center space-y-12 -mt-14 z-10 font-ubuntu text-white tracking-tight">
+      <div class="w-full flex flex-col justify-center items-center space-y-4">
+        <div class="w-full flex flex-col justify-center items-center md:flex-row md:justify-center md:space-x-2 font-medium text-3xl md:text-4xl">
+          <h1>A modern</h1>
+          <h1>publishing platform</h1>
+        </div>
+        <div class="w-full flex flex-col justify-center items-center md:flex-row md:justify-center md:space-x-2 text-base font-thin">
+          <h3>Grow your audience and build your</h3>
+          <h3>online brand</h3>
+        </div>
+      </div>
+      <div class="w-full flex justify-center space-x-3 font-medium">
+        <a href="#" class="px-5 py-2 bg-white rounded-full text-light-red hover:bg-lighter-red-1 hover:text-white transition duration-500">Start for Free</a>
+        <a href="#" class="px-5 py-2 border border-white rounded-full hover:bg-white hover:text-light-red transition duration-500">Learn More</a>
+      </div>
+    </section>
+    
+  </header>
+  
+  <main>
+    <!-- first section -->
+    <section class="bg-editor font-overpass">
+      <div class="w-full flex flex-col items-center">
+        <h2 class="text-2xl font-medium text-darker-blue pb-10 md:pb-0 pt-24">Designed for the future</h2>
+      </div>
+      
+      <div class="w-full relative md:container mx-auto md:flex md:flex-row-reverse md:justify-between pb-8 md:pb-28 md:pt-10">
+        <div class="w-full md:w-2/5 flex flex-col items-center">
+          <img src="images/illustration-editor-mobile.svg" alt="illustration-editor" class="w-full md:hidden">
+        </div>
+        <div class="w-full md:w-3/5 flex-col items-center py-8 px-7">
+          <div class="w-full flex flex-col items-center md:items-start text-center md:text-left md:pr-4">
+            <h2 class="text-2xl md:text-xl font-medium text-darker-blue px-7 md:px-0">Introducing an extensible editor</h2>
+            <p class="text-sm md:text-xs font-light px-5 md:px-0 py-4 text-darker-grayish-blue">
+              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+          <div class="w-full flex flex-col items-center mt-4 md:items-start text-center md:text-left md:pr-4">
+            <h2 class="text-2xl md:text-xl font-medium text-darker-blue px-7 md:px-0">Robust content management</h2>
+            <p class="text-sm md:text-xs font-light px-5 md:px-0 py-4 text-darker-grayish-blue">
+              Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- second section -->
+    <section class="font-overpass">
+      <div class="relative mt-44 md:mt-8 bg-circles w-full h-120 md:h-72 rounded-bl-custom rounded-tr-custom">
+        <div class="w-full md:container mx-auto">
+          <div class="h-full w-full flex flex-col md:flex-row items-center absolute md:relative -top-44 md:-top-12">
+            <img class="w-full md:w-96" src="images/illustration-phones.svg" alt="illustration-phone">
+            <div class="w-full flex flex-col items-center md:items-start text-center md:text-left pt-4 md:pt-0 md:pl-5 text-white font-ubuntu">
+              <h2 class="text-4xl md:text-2xl font-medium px-7 md:px-0">State of the Art Infrastructure</h2>
+              <p class="text-base md:text-xs font-light px-7 md:px-0 py-4">
+                With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+                This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- third section -->
+    <section class="bg-laptop font-overpass pt-28 pb-14">
+      <div class="w-full relative md:container mx-auto md:flex md:flex-row md:justify-between pb-8 md:pb-28 md:pt-10">
+        <div class="w-full h-80 md:w-1/2">
+          <!-- empty space for laptop svg background -->
+        </div>
+        <div class="w-full md:w-1/2 flex-col items-center py-8 md:ml-9">
+          <div class="w-full flex flex-col items-center md:items-start text-center md:text-left md:pr-4">
+            <h2 class="text-2xl md:text-xl font-medium text-darker-blue px-7 md:px-0">Free, open, simple</h2>
+            <p class="text-sm md:text-xs font-light px-5 md:px-0 py-4 text-darker-grayish-blue">
+              Blogr is a free and open source application backed by a large community of helpful developers. It supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+          </div>
+          <div class="w-full flex flex-col items-center mt-4 md:items-start text-center md:text-left md:pr-4">
+            <h2 class="text-2xl md:text-xl font-medium text-darker-blue px-7 md:px-0">Powerful tooling</h2>
+            <p class="text-sm md:text-xs font-light px-5 md:px-0 py-4 text-darker-grayish-blue">
+              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+              capable of producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- footer -->
+  <footer class="bg-darker-black-blue text-white rounded-tr-custom font-overpass">
+    <div class="md:container mx-auto w-full h-full">
+      <div class="flex flex-col md:flex-row md:justify-start md:space-x-36 items-center md:items-start py-16 md:py-14">
+        <img class="w-24 md:w-16 pb-20 md:pb-0" src="images/logo.svg" alt="Blogr">
+        <div class="flex flex-col items-center md:items-start pb-8 md:pb-0">
+          <a class="font-semibold text-lg md:text-xs" href="#">Product</a>
+          <div class="w-full flex flex-col items-center md:items-start pt-6 space-y-2 font-thin text-lg md:text-xs">
+            <a class="hover:underline" href="#">Overview</a>
+            <a class="hover:underline" href="#">Pricing</a>
+            <a class="hover:underline" href="#">Marketplace</a>
+            <a class="hover:underline" href="#">Features</a>
+            <a class="hover:underline" href="#">Integrations</a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center md:items-start pb-8 md:pb-0">
+          <a class="font-semibold text-lg md:text-xs" href="#">Company</a>
+          <div class="w-full flex flex-col items-center md:items-start pt-6 space-y-2 font-thin text-lg md:text-xs">
+            <a class="hover:underline" href="#">About</a>
+            <a class="hover:underline" href="#">Team</a>
+            <a class="hover:underline" href="#">Blog</a>
+            <a class="hover:underline" href="#">Careers</a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center md:items-start pb-8 md:pb-0">
+          <a class="font-semibold text-lg md:text-xs" href="#">Connect</a>
+          <div class="w-full flex flex-col items-center md:items-start pt-6 space-y-2 font-thin text-lg md:text-xs">
+            <a class="hover:underline" href="#">Contact</a>
+            <a class="hover:underline" href="#">Newsletter</a>
+            <a class="hover:underline" href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- javascript -->
+  <script src="js/main.js"></script>
+  
+  <!--///
+    coded by arjawa
+    my third solution for frontendmentor.io challange
+  ///-->
+</body>
+</html>

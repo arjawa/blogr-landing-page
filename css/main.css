@@ -1,0 +1,50 @@
+.bg-gradient-image {
+  background-image: url('../images/bg-pattern-intro.svg'), linear-gradient(to top left, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+  background-position: -380px -290px, top left;
+  background-size: 1400px 1400px, cover;
+  background-repeat: no-repeat;
+}
+
+.bg-circles {
+  background-image: url('../images/bg-pattern-circles.svg'), linear-gradient(to left, hsl(237, 23%, 32%), hsl(237, 17%, 21%));
+  background-position: -108px -220px, center center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.bg-laptop {
+  background-image: url('../images/illustration-laptop-mobile.svg');
+  background-position: -65px 80px;
+  background-size: 490px 340px;
+  background-repeat: no-repeat;
+}
+
+@media(min-width: 768px) {
+  .bg-gradient-image {
+    background-position: -300px -920px, top left;
+    background-size: 2200px 2200px, cover;
+    background-repeat: no-repeat;
+  }
+
+  .bg-editor {
+    background-image: url('../images/illustration-editor-desktop.svg');
+    background-position: 580px 60px;
+    background-size: 570px 520px;
+    background-repeat: no-repeat;
+  }
+
+  .bg-circles {
+    background-position: -165px -430px, center center;
+    background-size: 800px 800px, cover;
+  }
+
+  .bg-laptop {
+    background-position: -180px 55px;
+    background-size: 640px 520px;
+  }
+  
+  /* custom utilities */
+  .md\:h-110 {
+    height: 26rem;
+  }
+}
